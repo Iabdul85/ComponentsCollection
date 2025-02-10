@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primery: #ffffff;
+  --primeryDark: #ffffff;
+  --secondary: #171717;
+  --secondaryDark: #171717;
+  --gray: #171717;
+  --grayDark: #171717;
+}
