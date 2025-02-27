@@ -1,9 +1,11 @@
-import Hello from "./components/Hello";
+import React from 'react'
 
-export default function Home() {
+const page = () => {
   return (
     <>
-    <Hello />
+      
     </>
-  );
+  )
 }
+
+export default page
