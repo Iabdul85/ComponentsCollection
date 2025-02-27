@@ -8,7 +8,9 @@ import TabSection from "@/sections/TabSection";
 import OnePlatformSection from "@/sections/OnePlatformSection";
 import VerticalSlideCardsSection from "@/sections/VerticalSlideCardsSection";
 import CardSliderSection from "@/sections/CardSliderSection";
-import { cardsVertical } from "@/mock/home";
+import { cardsVertical, homePhonePrice } from "@/mock/home";
+import CtaSection from "@/components/CtaSection";
+import PriceSection from "@/sections/PriceSection";
 
 export default function Home() {
   return (
@@ -22,7 +24,13 @@ export default function Home() {
         ]}
         video={true}
       />
-
+      <CtaSection
+        topTitle={"It’s Affordable & Beyond Bandwidth!"}
+        heading="Find Low Cost Internet Service Providers In Your Area"
+        paragraph={[
+          "Connect, explore, & conquer like never before with the best and low cost internet service plans - Hassle free connectivity for your home. Just enter your zip code below to get started!",
+        ]}
+      />
       <AffiliateSection />
 
       <AssetSection
@@ -45,6 +53,14 @@ export default function Home() {
         carddata={verticalData}
       />
 
+      <PriceSection
+        heading="The Best Cable TV Plans For Ultimate Entertainment For Your Home"
+        paragraph={[
+          "Dive in the world of timeless entertainment where thrilling sports, blockbuster movies, and a thousands of channels lineups come together to bring you the best value for your money. The best cable TV providers nationwide ensure you’re always entertained with better quality and never miss a moment of your favorite shows.",
+        ]}
+        data={homePhonePrice}
+      />
+
       <AssetSection
         bgblue={true}
         heading="Scalify, Our Unified CRM, Lets You Manage All Your Sales & Marketing Efforts From a Single Dashboard"
@@ -64,7 +80,6 @@ export default function Home() {
         callReqBtn
       />
 
-
       <OnePlatformSection
         heading="One Platform --- 100+ Ways To Grow"
         paragraph={[
@@ -72,7 +87,6 @@ export default function Home() {
         ]}
         carddata={onePlatformData}
       />
-
 
       <TabSection
         heading="Get All The Essential Tools Under One Roof For 6X Better Results"
@@ -84,15 +98,16 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="max-w-[1024px] mx-auto">
             <Heading
-              heading={"Get Better Results In Just 1 Year With a Tool That’s Better Than Zoho and Other Popular Platforms"}
-              className={`display2`} />
+              heading={
+                "Get Better Results In Just 1 Year With a Tool That’s Better Than Zoho and Other Popular Platforms"
+              }
+              className={`display2`}
+            />
           </div>
           <div className="md:max-w-[1024x] w-full mx-auto">
             <div className="flex justify-center items-center gap-x-6 xs:gap-y-0 gap-y-4 flex-wrap pt-4">
               {BetterResults.map((item, index) => (
-                <div
-                  key={index}
-                >
+                <div key={index}>
                   <Image
                     src={item.image}
                     width={367}
@@ -127,7 +142,6 @@ export default function Home() {
         callReqBtn
       />
 
-
       <CardSliderSection
         topTitle="Our Services"
         heading="A Variety Of Digital Marketing Solutions At Your Service"
@@ -137,8 +151,6 @@ export default function Home() {
         cardData={cardsVertical}
         varient="vertical"
       />
-
-
 
       <AssetSection
         heading="Stay Ahead of the Competition and Sell 4X Smarter, Faster with Cutting-Edge Digital Solutions"
